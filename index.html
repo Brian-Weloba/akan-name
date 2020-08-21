@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
     <!--<link href="css/styles.css" rel="stylesheet" type="text/css">-->
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -80,25 +80,25 @@
     <div class="container">
         <h1 id="form">whats my akan name</h1>
         <h1 id="table-head">Date of birth</h1>
-        <form>
+        <form id="myForm">
             <div>
                 <pd>
                     </p>
                     <label for="year" id="about-b">Year of Birth</label><br>
-                    <input type="number" id="year" name="year" min="1900" max="2020" placeholder="yyyy">
+                    <input type="number" id="year" name="year" min="1900" max="2020" placeholder="yyyy" required maxlength="4">
             </div>
 
             <div>
                 <p></p>
                 <label for="month" id="about-b">Month of Year</label><br>
-                <input type="number" id="month" name="month" min="1" max="12" placeholder="mm">
+                <input type="number" id="month" name="month" min="1" max="12" placeholder="mm" required maxlength="2">
 
             </div>
 
             <div>
                 <p></p>
                 <label for="dob" id="about-b">Day of Month</label><br>
-                <input type="number" id="dob" name="dob" min="1" max="31" placeholder="dd">
+                <input type="number" id="dob" name="dob" min="1" max="31" placeholder="dd" required maxlength="2">
 
             </div>
 
@@ -122,6 +122,7 @@
                 </div>
             </div>
         </form>
+        <div id="error"></div>
     </div>
     <nav class="navbar navbar-light ">
         <a class="navbar-brand" href="#">Default</a>
