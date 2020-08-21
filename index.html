@@ -17,7 +17,7 @@
         </a>
     </nav>
     <div class="container">
-        <h1 id="about-tt">So, What are Akan names?</h1>
+        <h1 id="about-tt"> What are Akan names?</h1>
         <p id="about">In West Africa, newborns are given special names depending on the day they are born. Diverse ethnicities have variants and meanings as a symbol of cultural integrity and ancestral affiliation.</p>
         <p id="about">The Akan people use the Kwa language group’s system of timekeeping, which is based on a six-day week (‘nnanson‘), with the seventh day inclusive.</p>
         <button type="button" class="btn btn-outline-danger">Get Akan Name</button>
@@ -76,6 +76,47 @@
 
             </tbody>
         </table>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <label for="dob" class="col-sm-2 col-form-label">Day of Month</label>
+                <div class="col-sm-10">
+                    <input type="number" id="dob" name="dob" min="1" max="31" placeholder="dd">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="month" class="col-sm-2 col-form-label">Month of Year</label>
+                <div class="col-sm-10">
+                    <input type="number" id="month" name="month" min="1" max="12" placeholder="mm">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="year" class="col-sm-2 col-form-label">Year of Birth</label>
+                <div class="col-sm-10">
+                    <input type="number" id="year" name="year" min="1900" max="2020" placeholder="yyyy">
+                </div>
+            </div>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Gender:</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label><br>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-outline-danger">Get Akan Name</button>
+                </div>
+            </div>
+        </form>
     </div>
     <nav class="navbar navbar-light ">
         <a class="navbar-brand" href="#">Default</a>
