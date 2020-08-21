@@ -27,12 +27,12 @@
         <table class="table table-hover">
             <thread>
                 <tr>
-                    <th>Day Born</th>
-                    <th>Male Name</th>
-                    <th>Female Name</th>
+                    <th id="table-head">Day Born</th>
+                    <th id="table-head">Male Name</th>
+                    <th id="table-head">Female Name</th>
                 </tr>
             </thread>
-            <tbody>
+            <tbody id="about-b">
 
                 </tr>
                 <td>Monday</td>
@@ -79,25 +79,25 @@
     </div>
     <div class="container" id="form">
         <h1 id="about-tt">whats my akan name</h1>
-        <h1 id="about-b">Date of birth</h1>
+        <h1 id="table-head">Date of birth</h1>
         <form>
             <div>
                 <pd>
                     </p>
-                    <label for="year" id="about">Year of Birth</label><br>
+                    <label for="year" id="about-b">Year of Birth</label><br>
                     <input type="number" id="year" name="year" min="1900" max="2020" placeholder="yyyy">
             </div>
 
             <div>
                 <p></p>
-                <label for="month" id="about">Month of Year</label><br>
+                <label for="month" id="about-b">Month of Year</label><br>
                 <input type="number" id="month" name="month" min="1" max="12" placeholder="mm">
 
             </div>
 
             <div>
                 <p></p>
-                <label for="dob" id="about">Day of Month</label><br>
+                <label for="dob" id="about-b">Day of Month</label><br>
                 <input type="number" id="dob" name="dob" min="1" max="31" placeholder="dd">
 
             </div>
@@ -105,9 +105,9 @@
 
             <fieldset class="form-group">
                 <div>
-                    <legend id="about">Gender:</legend>
+                    <legend id="table-head">Gender:</legend>
                     <div>
-                        <div class="form-check">
+                        <div class="form-check" id="about-b">
                             <input type="radio" id="male" name="gender" value="male">
                             <label for="male" id="about">Male</label><br>
                             <input type="radio" id="female" name="gender" value="female">
@@ -118,7 +118,7 @@
             </fieldset>
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-outline-danger">Let's Go!</button>
+                    <button type="submit" class="btn btn-outline-danger" id="table-head">Let's Go!</button>
                 </div>
             </div>
         </form>
