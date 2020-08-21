@@ -73,6 +73,7 @@ body {
     background-color: #fff;
     background-image: url('../img/BACKFRONT.png');
     background-size: 100%;
+    font-family: channel;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -579,10 +580,11 @@ pre code {
 .container-lg,
 .container-xl {
     width: 100%;
-    padding-right: 15px;
+    padding-right: 130px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 240px;
 }
 
 @media (min-width: 576px) {
@@ -623,6 +625,10 @@ pre code {
     body {
         background-image: url('../img/FRONT-PATTERN.png');
         background-size: 112%;
+    }
+    .container {
+        padding-top: 60px;
+        padding-right: 15px
     }
 }
 
@@ -4548,6 +4554,10 @@ input[type="button"].btn-block {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    background-color: #ffcc33;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
 }
 
 .navbar .container,
@@ -10615,8 +10625,24 @@ a.text-dark:focus {
     }
 }
 
-.navbar {
-    background-color: #faebd7;
+@font-face {
+    font-family: channel;
+    src: url(../img/Andika-Regular.ttf);
+}
+
+#about {
+    font-family: channel;
+    font-size: 24px;
+}
+
+@font-face {
+    font-family: qumba;
+    src: url(../img/qumbazonki.ttf);
+}
+
+#about-tt {
+    font-family: qumba;
+    font-size: 100px;
 }
 
 
