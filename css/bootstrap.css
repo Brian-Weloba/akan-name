@@ -260,6 +260,7 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    font-size: 36px;
 }
 
 button,
@@ -10635,7 +10636,7 @@ a.text-dark:focus {
 }
 
 #about {
-    font-family: channel-b;
+    font-family: channel;
     font-size: 36px;
 }
 
