@@ -71,7 +71,7 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
-    background-image: url('../img/BACKFRONT.png');
+    background-image: url('../img/BG-FULL.png');
     background-size: 100%;
     font-family: channel;
 }
@@ -623,14 +623,33 @@ pre code {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1140px) {
     body {
-        background-image: url('../img/FRONT-PATTERN.png');
+        background-image: url('../img/BG-13.png');
         background-size: 112%;
     }
     .container {
         padding-top: 60px;
         padding-right: 15px
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-image: url('../img/BG-13.png');
+    }
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        background-image: url('../img/BG-12.png');
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-image: url('../img/FRONT-PATTERN.png');
+        background-size: 112%;
     }
 }
 
