@@ -4,7 +4,7 @@ var akanNameMale = ["Kwadwo", "Kwabena", "Kwaku", "Yaw", "Koffi", "Kwame", "Kwas
 var akanNameFemale = ["Adwoa", "Abena", "Akua", "Yaa", "Aufa", "Amma", "Akosua"];
 
 
-
+// a function to get the day of the week
 var dayOfWeek = function() {
     var year = document.getElementById("year").value;
     CC = parseInt(year.substring(0, 2));
@@ -20,7 +20,9 @@ var dayOfWeek = function() {
     } else {
         MM -= 2;
     }
-    console.log(CC, YY, MM, DD);
-    var day = DD + ((13 * MM - 1) / 5) + YY + (YY / 4) + (CC / 4) - 2 * CC;
+    var day = DD + Math.floor((13 * MM - 1) / 5) + YY + Math.floor(YY / 4) + Math.floor(CC / 4) - (2 * CC);
+    console.log(CC, YY, MM, DD, day);
     return Math.floor(day % 7);
 };
+
+//logic for deciding what name to give
