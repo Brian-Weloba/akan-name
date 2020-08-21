@@ -6,7 +6,7 @@
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/styles.css" rel="stylesheet" type="text/css">-->
     <script src="js/script.js"></script>
 </head>
 
@@ -77,26 +77,29 @@
             </tbody>
         </table>
     </div>
-    <div class="container">
+    <div class="jumbotron" id="form">
         <form>
             <div class="form-group row">
-                <label for="dob" class="col-sm-2 col-form-label">Day of Month</label>
-                <div class="col-sm-10">
-                    <input type="number" id="dob" name="dob" min="1" max="31" placeholder="dd">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="month" class="col-sm-2 col-form-label">Month of Year</label>
-                <div class="col-sm-10">
-                    <input type="number" id="month" name="month" min="1" max="12" placeholder="mm">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="year" class="col-sm-2 col-form-label">Year of Birth</label>
+                <label for="year">Year of Birth</label>
                 <div class="col-sm-10">
                     <input type="number" id="year" name="year" min="1900" max="2020" placeholder="yyyy">
                 </div>
             </div>
+
+            <div class="form-group row">
+                <label for="month">Month of Year</label>
+                <div class="col-sm-10">
+                    <input type="number" id="month" name="month" min="1" max="12" placeholder="mm">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="dob">Day of Month</label>
+                <div class="col-sm-10">
+                    <input type="number" id="dob" name="dob" min="1" max="31" placeholder="dd">
+                </div>
+            </div>
+
 
             <fieldset class="form-group">
                 <div class="row">
@@ -113,7 +116,7 @@
             </fieldset>
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-outline-danger">Get Akan Name</button>
+                    <button type="submit" class="btn btn-outline-danger">Let's Go!</button>
                 </div>
             </div>
         </form>
