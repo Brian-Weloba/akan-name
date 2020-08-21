@@ -10680,7 +10680,8 @@ a.text-dark:focus {
 }
 
 #form {
-    align-items: center;
+    font-family: qumba;
+    font-size: 100px;
 }
 
 #table-head {
