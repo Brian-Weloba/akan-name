@@ -222,6 +222,7 @@ svg {
 
 table {
     border-collapse: collapse;
+    font-size: 36px;
 }
 
 caption {
@@ -10630,12 +10631,22 @@ a.text-dark:focus {
 
 @font-face {
     font-family: channel;
-    src: url(../img/Andika-Regular.ttf);
+    src: url(../img/sunn-line-free.otf);
 }
 
 #about {
-    font-family: channel;
-    font-size: 24px;
+    font-family: channel-b;
+    font-size: 36px;
+}
+
+@font-face {
+    font-family: channel-b;
+    src: url(../img/SUNN-Line-Free-Bold.otf);
+}
+
+#about-b {
+    font-family: channel-b;
+    font-size: 36px;
 }
 
 @font-face {
