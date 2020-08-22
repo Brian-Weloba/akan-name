@@ -48,8 +48,6 @@ function checkInputs() {
     const monthValue = month.value.trim();
     const dayValue = day.value.trim();
 
-    debugger;
-
     if (yearValue === "") {
         setErrorFor(year, "Year cannot be empty");
     } else if (yearValue.toString().length != 4) {
