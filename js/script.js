@@ -28,3 +28,91 @@ var dayOfWeek = function() {
 var weekDay = dayOfWeek();
 //logic for deciding what name to give
 if (weekDay === 0) {}
+
+
+
+const form = document.getElementById("form");
+const year = document.getElementById("year");
+const month = document.getElementById("month");
+const day = document.getElementById("dob");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    checkInputs();
+});
+
+function checkInputs() {
+    //get values
+    const yearValue = year.value.trim();
+    const monthValue = month.value.trim();
+    const dayValue = day.value.trim();
+
+    debugger;
+
+    if (yearValue === "") {
+        setErrorFor(year, "Year cannot be empty");
+    } else if (yearValue.toString().length != 4) {
+        setErrorFor(year, "Not a valid year");
+    } else {
+        setSuccessFor(year);
+    }
+
+    if (monthValue === "") {
+        setErrorFor(month, "Month cannot be empty");
+    } else if (monthValue <= 0 || monthValue >= 13) {
+        setErrorFor(month, "Not a valid month");
+    } else {
+        setSuccessFor(month);
+    }
+
+    if (dayValue === "" || dayValue > 31) {
+        setErrorFor(day, "Day cannot be empty");
+    } else {
+        if (monthValue == 4 || monthValue == 6 || monthValue == 9 || monthValue == 11) {
+            if (dayValue < 1 || dayValue > 30) {
+                setErrorFor(day, "Not a valid day");
+            } else {
+                setSuccessFor(day);
+            }
+        } else if (monthValue == 1 || monthValue == 3 || monthValue == 5 || monthValue == 7 || monthValue == 8 || monthValue == 10 || monthValue == 12) {
+            if (dayValue < 1 || dayValue > 31) {
+                setErrorFor(day, "Not a valid day");
+            } else {
+                setSuccessFor(day);
+            }
+        } else if (monthValue == 2) {
+            if (yearValue % 4 != 0) {
+                if (dayValue < 1 || dayValue > 28) {
+                    setErrorFor(day, "Not a valid day");
+                } else {
+                    setSuccessFor(day);
+                }
+            } else {
+                if (dayValue < 1 || dayValue >= 30) {
+                    setErrorFor(day, "Not a valid day");
+                } else {
+                    setSuccessFor(day);
+                }
+            }
+
+        }
+    }
+}
+
+function setErrorFor(input, message) {
+    const formControl = input.parentElement; //formcontrol
+    const small = formControl.querySelector("small");
+
+
+    // add error message inside small
+    small.innerText = message;
+
+    //add error class
+    formControl.className = "form-control error";
+}
+
+function setSuccessFor(input) {
+    const formControl = input.parentElement;
+    formControl.className = "form-control success";
+}
