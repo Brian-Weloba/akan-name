@@ -6,7 +6,6 @@ var akanNameFemale = ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Aufa", "Amma"]
 
 // a function to get the day of the week
 var dayOfWeek = function() {
-    const a = 5;
     var year = document.getElementById("year").value;
     CC = parseInt(year.substring(0, 2));
     YY = parseInt(year.substring(2, 4));
@@ -28,4 +27,4 @@ var dayOfWeek = function() {
 
 var weekDay = dayOfWeek();
 //logic for deciding what name to give
-if (weekDay === 0)
+if (weekDay === 0) {}
