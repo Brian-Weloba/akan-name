@@ -42,6 +42,22 @@ form.addEventListener("submit", (e) => {
     checkInputs();
 });
 
+//is the value valid
+var yearValid = function(a) {
+    return a;
+};
+
+var monthValid = function(a) {
+    return a;
+};
+
+var dayValid = function(a) {
+    return a;
+};
+
+
+
+
 function checkInputs() {
     //get values
     const yearValue = year.value.trim();
@@ -50,10 +66,13 @@ function checkInputs() {
 
     if (yearValue === "") {
         setErrorFor(year, "Year cannot be empty");
+    } else if (yearValue < 1582) {
+        setErrorFor(year, "sorry. The Gregorian calendar wasnt invented yet");
     } else if (yearValue.toString().length != 4) {
         setErrorFor(year, "Not a valid year");
     } else {
         setSuccessFor(year);
+        yearValid = true;
     }
 
     if (monthValue === "") {
@@ -62,6 +81,7 @@ function checkInputs() {
         setErrorFor(month, "Not a valid month");
     } else {
         setSuccessFor(month);
+        monthValid = true;
     }
 
     if (dayValue === "" || dayValue > 31) {
@@ -72,12 +92,14 @@ function checkInputs() {
                 setErrorFor(day, "Not a valid day");
             } else {
                 setSuccessFor(day);
+                dayValid = true;
             }
         } else if (monthValue == 1 || monthValue == 3 || monthValue == 5 || monthValue == 7 || monthValue == 8 || monthValue == 10 || monthValue == 12) {
             if (dayValue < 1 || dayValue > 31) {
                 setErrorFor(day, "Not a valid day");
             } else {
                 setSuccessFor(day);
+                dayValid = true;
             }
         } else if (monthValue == 2) {
             if (yearValue % 4 != 0) {
@@ -85,12 +107,14 @@ function checkInputs() {
                     setErrorFor(day, "Not a valid day");
                 } else {
                     setSuccessFor(day);
+                    dayValid = true;
                 }
             } else {
                 if (dayValue < 1 || dayValue >= 30) {
                     setErrorFor(day, "Not a valid day");
                 } else {
                     setSuccessFor(day);
+                    dayValid = true;
                 }
             }
 
