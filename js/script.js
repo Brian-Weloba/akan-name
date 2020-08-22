@@ -8,6 +8,20 @@ var yearValid = false;
 var monthValid = false;
 var dayValid = false;
 
+//set gender
+/*function getComboA(selectObject) {
+    var value = selectObject.value;  
+    console.log(value);
+  }
+var gender = document.getElementById("sel1").selectedIndex;
+gender.addEventListener('change', function() {
+    var gender = document.getElementById("sel1").selectedIndex;
+});
+
+document.getElementById("sel1").onchange = function() {
+    var value = document.getElementById("sel1").selectedIndex;
+};*/
+
 // a function to get the day of the week
 var dayOfWeek = function() {
     var year = document.getElementById("year").value;
@@ -29,6 +43,8 @@ var dayOfWeek = function() {
     var dow = Math.floor(day % 7);
     return dow;
 };
+
+
 
 const form = document.getElementById("form");
 const year = document.getElementById("year");
@@ -111,6 +127,7 @@ function checkInputs() {
 
         }
     }
+    debugger;
 }
 
 //set day of week [0-6]
@@ -140,11 +157,9 @@ function setSuccessFor(input) {
     formControl.className = "form-control success";
 }
 
-//set gender
-var gender = document.getElementById("sel1").selectedIndex;
-
 //set akan name to html span
 function getAkan(y) {
+    var gender = document.getElementById("sel1").selectedIndex;
     for (let i = 0; i < 7; i++) {
         if (gender == 0) {
             if (y == i) {
@@ -154,7 +169,7 @@ function getAkan(y) {
         } else if (gender == 1) {
             if (y == i) {
                 document.getElementById("dayb").innerHTML = dayInWeek[i];
-                document.getElementById("akanN").innerHTML = akanNameMale[i];
+                document.getElementById("akanN").innerHTML = akanNameFemale[i];
             }
         }
     }
