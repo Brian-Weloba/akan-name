@@ -1,8 +1,12 @@
-var CC, YY, MM, DD;
-var dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var CC, YY, MM, DD, weekDay;
+var dayInWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var akanNameMale = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Koffi", "Kwame"];
 var akanNameFemale = ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Aufa", "Amma"];
 
+//is the value valid
+var yearValid = false;
+var monthValid = false;
+var dayValid = false;
 
 // a function to get the day of the week
 var dayOfWeek = function() {
@@ -22,14 +26,9 @@ var dayOfWeek = function() {
     }
     var day = DD + Math.floor((13 * MM - 1) / 5) + YY + Math.floor(YY / 4) + Math.floor(CC / 4) - (2 * CC);
     console.log(CC, YY, MM, DD, day);
-    return Math.floor(day % 7);
+    var dow = Math.floor(day % 7);
+    return dow;
 };
-
-var weekDay = dayOfWeek();
-//logic for deciding what name to give
-if (weekDay === 0) {}
-
-
 
 const form = document.getElementById("form");
 const year = document.getElementById("year");
@@ -40,24 +39,16 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     checkInputs();
+    weekDay = setDay();
+    getAkan(weekDay);
 });
 
-//is the value valid
-var yearValid = function(a) {
-    return a;
-};
+function work() {
 
-var monthValid = function(a) {
-    return a;
-};
-
-var dayValid = function(a) {
-    return a;
-};
+}
 
 
-
-
+//validate input
 function checkInputs() {
     //get values
     const yearValue = year.value.trim();
@@ -122,6 +113,15 @@ function checkInputs() {
     }
 }
 
+//set day of week [0-6]
+function setDay() {
+    if (dayValid == true && monthValid == true && yearValid == true) {
+        var dd = dayOfWeek();
+        return dd;
+    } else {}
+}
+
+//invalid input message
 function setErrorFor(input, message) {
     const formControl = input.parentElement; //formcontrol
     const small = formControl.querySelector("small");
@@ -134,7 +134,28 @@ function setErrorFor(input, message) {
     formControl.className = "form-control error";
 }
 
+//valid input message
 function setSuccessFor(input) {
     const formControl = input.parentElement;
     formControl.className = "form-control success";
+}
+
+//set gender
+var gender = document.getElementById("sel1").selectedIndex;
+
+//set akan name to html span
+function getAkan(y) {
+    for (let i = 0; i < 7; i++) {
+        if (gender == 0) {
+            if (y == i) {
+                document.getElementById("dayb").innerHTML = dayInWeek[i];
+                document.getElementById("akanN").innerHTML = akanNameMale[i];
+            }
+        } else if (gender == 1) {
+            if (y == i) {
+                document.getElementById("dayb").innerHTML = dayInWeek[i];
+                document.getElementById("akanN").innerHTML = akanNameMale[i];
+            }
+        }
+    }
 }

@@ -151,3 +151,10 @@
 small {
     font-size: 50%;
 }
+
+#dayb,
+#akanN {
+    font-family: qumba;
+    color: #cc3333;
+    font-size: 42px;
+}
