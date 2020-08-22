@@ -151,7 +151,7 @@ strong {
 }
 
 small {
-    font-size: 80%;
+    font-size: 50%;
 }
 
 sub,
@@ -620,36 +620,6 @@ pre code {
     .container-lg,
     .container-xl {
         max-width: 1140px;
-    }
-}
-
-@media screen and (max-width: 1140px) {
-    body {
-        background-image: url('../img/BG-13.png');
-        background-size: 112%;
-    }
-    .container {
-        padding-top: 60px;
-        padding-right: 15px
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    body {
-        background-image: url('../img/BG-13.png');
-    }
-}
-
-@media screen and (max-width: 960px) {
-    body {
-        background-image: url('../img/BG-12.png');
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    body {
-        background-image: url('../img/FRONT-PATTERN.png');
-        background-size: 112%;
     }
 }
 
@@ -2143,11 +2113,9 @@ pre code {
 }
 
 .form-control {
-    display: block;
+    display: inline-block;
     width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
     padding: 0.375rem 0.75rem;
-    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
@@ -10647,47 +10615,6 @@ a.text-dark:focus {
         color: inherit;
         border-color: #dee2e6;
     }
-}
-
-@font-face {
-    font-family: channel;
-    src: url(../img/sunn-line-free.otf);
-}
-
-#about {
-    font-family: channel;
-    font-size: 36px;
-}
-
-@font-face {
-    font-family: channel-b;
-    src: url(../img/SUNN-Line-Free-Bold.otf);
-}
-
-#about-b {
-    font-family: channel-b;
-    font-size: 36px;
-}
-
-@font-face {
-    font-family: qumba;
-    src: url(../img/qumbazonki.ttf);
-}
-
-#about-tt {
-    font-family: qumba;
-    font-size: 100px;
-}
-
-#form {
-    font-family: qumba;
-    font-size: 100px;
-}
-
-#table-head {
-    font-size: 36px;
-    font-family: channel-b;
-    color: #cc3333;
 }
 
 

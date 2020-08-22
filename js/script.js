@@ -1,11 +1,12 @@
 var CC, YY, MM, DD;
-var dayOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-var akanNameMale = ["Kwadwo", "Kwabena", "Kwaku", "Yaw", "Koffi", "Kwame", "Kwasi"];
-var akanNameFemale = ["Adwoa", "Abena", "Akua", "Yaa", "Aufa", "Amma", "Akosua"];
+var dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var akanNameMale = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Koffi", "Kwame"];
+var akanNameFemale = ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Aufa", "Amma"];
 
 
 // a function to get the day of the week
 var dayOfWeek = function() {
+    const a = 5;
     var year = document.getElementById("year").value;
     CC = parseInt(year.substring(0, 2));
     YY = parseInt(year.substring(2, 4));
@@ -25,4 +26,6 @@ var dayOfWeek = function() {
     return Math.floor(day % 7);
 };
 
+var weekDay = dayOfWeek();
 //logic for deciding what name to give
+if (weekDay === 0)

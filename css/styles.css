@@ -1,0 +1,126 @@
+@font-face {
+    font-family: channel;
+    src: url(../img/sunn-line-free.otf);
+}
+
+#about {
+    font-family: channel;
+    font-size: 36px;
+}
+
+@font-face {
+    font-family: channel-b;
+    src: url(../img/SUNN-Line-Free-Bold.otf);
+}
+
+#about-b {
+    font-family: channel-b;
+    font-size: 36px;
+}
+
+@font-face {
+    font-family: qumba;
+    src: url(../img/qumbazonki.ttf);
+}
+
+#about-tt {
+    font-family: qumba;
+    font-size: 100px;
+}
+
+#table-head {
+    font-size: 36px;
+    font-family: channel-b;
+    color: #cc3333;
+}
+
+@media only screen and (max-width: 1140px) {
+    body {
+        background-image: url('../img/BG-13.png');
+        background-size: 112%;
+    }
+    .container {
+        padding-top: 60px;
+        padding-right: 15px
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background-image: url('../img/BG-13.png');
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        background-image: url('../img/BG-12.png');
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background-image: url('../img/FRONT-PATTERN.png');
+        background-size: 112%;
+    }
+}
+
+#form-c {
+    box-sizing: border-box;
+    display: flex;
+    font-size: 36px;
+    font-family: channel-b;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#form-c {
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3%);
+    width: 800px;
+    max-width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    width: 400px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 35px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #ffcc33;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 36px;
+    padding-left: 25px;
+    width: 100%;
+    color: #cc3333;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 77px;
+    right: 23px;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+}
