@@ -2,6 +2,7 @@ var CC, YY, MM, DD, weekDay;
 var dayInWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var akanNameMale = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Koffi", "Kwame"];
 var akanNameFemale = ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Aufa", "Amma"];
+var info = ["associated with the universe", "associated with peace", "associated with the ocean", "associated with spider/Ananse", "associated with the earth", "associated with fertility", "associated with God"];
 
 //is the value valid
 var yearValid = false;
@@ -74,7 +75,7 @@ function checkInputs() {
     if (yearValue === "") {
         setErrorFor(year, "Year cannot be empty");
     } else if (yearValue < 1582) {
-        setErrorFor(year, "sorry. The Gregorian calendar wasnt invented yet");
+        setErrorFor(year, "Input a date after 1582");
     } else if (yearValue.toString().length != 4) {
         setErrorFor(year, "Not a valid year");
     } else {
@@ -127,7 +128,6 @@ function checkInputs() {
 
         }
     }
-    debugger;
 }
 
 //set day of week [0-6]
@@ -165,11 +165,13 @@ function getAkan(y) {
             if (y == i) {
                 document.getElementById("dayb").innerHTML = dayInWeek[i];
                 document.getElementById("akanN").innerHTML = akanNameMale[i];
+                document.getElementById("meaning").innerHTML = info[i];
             }
         } else if (gender == 1) {
             if (y == i) {
                 document.getElementById("dayb").innerHTML = dayInWeek[i];
                 document.getElementById("akanN").innerHTML = akanNameFemale[i];
+                document.getElementById("meaning").innerHTML = info[i];
             }
         }
     }
