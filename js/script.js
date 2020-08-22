@@ -9,20 +9,6 @@ var yearValid = false;
 var monthValid = false;
 var dayValid = false;
 
-//set gender
-/*function getComboA(selectObject) {
-    var value = selectObject.value;  
-    console.log(value);
-  }
-var gender = document.getElementById("sel1").selectedIndex;
-gender.addEventListener('change', function() {
-    var gender = document.getElementById("sel1").selectedIndex;
-});
-
-document.getElementById("sel1").onchange = function() {
-    var value = document.getElementById("sel1").selectedIndex;
-};*/
-
 // a function to get the day of the week
 var dayOfWeek = function() {
     var year = document.getElementById("year").value;
@@ -45,8 +31,6 @@ var dayOfWeek = function() {
     return dow;
 };
 
-
-
 const form = document.getElementById("form");
 const year = document.getElementById("year");
 const month = document.getElementById("month");
@@ -59,11 +43,6 @@ form.addEventListener("submit", (e) => {
     weekDay = setDay();
     getAkan(weekDay);
 });
-
-function work() {
-
-}
-
 
 //validate input
 function checkInputs() {
@@ -143,7 +122,6 @@ function setErrorFor(input, message) {
     const formControl = input.parentElement; //formcontrol
     const small = formControl.querySelector("small");
 
-
     // add error message inside small
     small.innerText = message;
 
@@ -159,6 +137,7 @@ function setSuccessFor(input) {
 
 //set akan name to html span
 function getAkan(y) {
+    //get gender
     var gender = document.getElementById("sel1").selectedIndex;
     for (let i = 0; i < 7; i++) {
         if (gender == 0) {
