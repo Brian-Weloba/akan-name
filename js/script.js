@@ -35,6 +35,7 @@ const form = document.getElementById("form");
 const year = document.getElementById("year");
 const month = document.getElementById("month");
 const day = document.getElementById("dob");
+const akan = document.getElementById("akan");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -42,6 +43,7 @@ form.addEventListener("submit", (e) => {
     checkInputs();
     weekDay = setDay();
     getAkan(weekDay);
+    myFunction();
 });
 
 //validate input
@@ -135,6 +137,13 @@ function setSuccessFor(input) {
     formControl.className = "form-control success";
 }
 
+
+
+/*function setOutput(input) {
+    const formControl = input.parentElement;
+    formControl.classname = "akan show";
+}*/
+
 //set akan name to html span
 function getAkan(y) {
     //get gender
@@ -154,4 +163,22 @@ function getAkan(y) {
             }
         }
     }
+    /*setOutput(akan);*/
+}
+
+function myFunction() {
+    var x = document.getElementById("akan");
+    var y = document.getElementById("form");
+    if (dayValid === true && monthValid === true && yearValid === true) {
+        if (x.style.display === "none") {
+            x.style.display = "flex";
+        } else {
+            x.style.display = "none";
+        }
+        if (y.style.display === "flex") {
+            y.style.display = "none";
+        } else {
+            y.style.display = "flex";
+        }
+    } else {}
 }
