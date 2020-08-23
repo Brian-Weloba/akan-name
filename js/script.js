@@ -1,7 +1,7 @@
 var CC, YY, MM, DD, weekDay;
 var dayInWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var akanNameMale = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Koffi", "Kwame"];
-var akanNameFemale = ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Aufa", "Amma"];
+var akanNameFemale = ["Akosua", "Adwoa", "Abena", "Akua", "Yaa", "Afua", "Amma"];
 var info = ["associated with the universe", "associated with peace", "associated with the ocean", "associated with spider/Ananse", "associated with the earth", "associated with fertility", "associated with God"];
 
 //is the value valid
@@ -43,7 +43,6 @@ form.addEventListener("submit", (e) => {
     checkInputs();
     weekDay = setDay();
     getAkan(weekDay);
-    myFunction();
 });
 
 //validate input
@@ -164,20 +163,18 @@ function getAkan(y) {
         }
     }
     /*setOutput(akan);*/
+    myFunction();
 }
 
 function myFunction() {
-    var x = document.getElementById("akan");
-    var y = document.getElementById("form");
+    let x = document.getElementById("akan");
+    let y = document.getElementById("form");
     if (dayValid === true && monthValid === true && yearValid === true) {
-        if (x.style.display === "none") {
+        if (x.style.display === "none" || x.style.display === "") {
             x.style.display = "flex";
-        } else {
-            x.style.display = "none";
-        }
-        if (y.style.display === "flex") {
             y.style.display = "none";
         } else {
+            x.style.display = "none";
             y.style.display = "flex";
         }
     } else {}
