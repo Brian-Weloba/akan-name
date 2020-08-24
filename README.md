@@ -11,8 +11,9 @@ This site takes in the user's birthday and finds the day of week they were bor o
 The site was built using [GitHub Pages](htps://pages.github.com/).
 
 ## Page Preview
+
 ![alt screenshot](img/screenshot.png)
- 
+
 ## Setup
 
  1. Clone this repository.
