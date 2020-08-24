@@ -136,13 +136,6 @@ function setSuccessFor(input) {
     formControl.className = "form-control success";
 }
 
-
-
-/*function setOutput(input) {
-    const formControl = input.parentElement;
-    formControl.classname = "akan show";
-}*/
-
 //set akan name to html span
 function getAkan(y) {
     //get gender
@@ -162,7 +155,6 @@ function getAkan(y) {
             }
         }
     }
-    /*setOutput(akan);*/
     myFunction();
 }
 

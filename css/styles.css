@@ -157,8 +157,7 @@ small {
 
 @media only screen and (max-width: 1200px) {
     body {
-        background-image: url('../img/FRONT-PATTERN.png');
-        background-size: 112%;
+        background-image: url('../img/PATTERN1.png');
     }
 }
 
