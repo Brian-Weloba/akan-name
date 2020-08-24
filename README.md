@@ -1,7 +1,8 @@
 # Akan Names
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![repo-size](https://img.shields.io/github/repo-size/brian-weloba/akan-name)
 
-### **Author**: ```Brian Weloba```
+## **Author**: ```Brian Weloba```
 
 ## Description
 
@@ -24,9 +25,11 @@ The site was built using [GitHub Pages](htps://pages.github.com/).
 - Alternatively, view on [GitHub Pages](https://brian-weloba.github.io/akan-name/).
 
 ## BDD
+
 User inputs date of birth on provided form and select a gender.
 
 On submit:
+
 ```javascript
 //call checkInput() to validate input
 checkInput();
@@ -37,19 +40,21 @@ getAkanName(dayOfWeek);
 ```
 
  checking Input:
+
 ```javascript
 function clientSideValidation() {
    //get user input
-   if(conditions for invalid input) { 
+   if(conditions for invalid input) {
       //function to set error message
    } else {
       //set success message
       //validate input
    }
- } 
+ }
   ```
   
   get day of week:
+
   ```javascript
   function getDayOfWeek() {
    //run set of mathematical functions to get what day of the week
@@ -57,6 +62,7 @@ function clientSideValidation() {
   ```
   
   get Akan name:
+
   ```javascript
   function getAkanName() {
    //functions to get the akan name from an array
@@ -65,6 +71,7 @@ function clientSideValidation() {
   ```
 
 ## Contact
+
 E-mail: ```bweloba@gmail.com```
 
 ## Technologies Used
