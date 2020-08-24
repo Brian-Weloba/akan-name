@@ -10,7 +10,7 @@ In West Africa, newborns are given special names depending on the day they are b
 
 This site takes in the user's birthday and finds the day of week they were bor on. Based on that it calculates your Akan name.
 
-The site was built using [GitHub Pages](htps://pages.github.com/).
+The site was published on [GitHub Pages](htps://pages.github.com/).
 
 ## Page Preview
 
@@ -44,7 +44,7 @@ getAkanName(dayOfWeek);
 ```javascript
 function clientSideValidation() {
    //get user input
-   if(conditions for invalid input) {
+   if(conditions on invalid input) {
       //function to set error message
    } else {
       //set success message
