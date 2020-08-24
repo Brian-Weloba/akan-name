@@ -4541,7 +4541,7 @@ input[type="button"].btn-block {
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0.5rem 1rem;
     background-color: #ffcc33;
     -webkit-box-shadow: 0 8px 6px -6px #999;
