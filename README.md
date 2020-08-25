@@ -10,7 +10,7 @@ In West Africa, newborns are given special names depending on the day they are b
 
 This site takes in the user's birthday and finds the day of week they were bor on. Based on that it calculates your Akan name.
 
-The site was built using [GitHub Pages](htps://pages.github.com/).
+The site was published on [GitHub Pages](htps://pages.github.com/).
 
 ## Page Preview
 
@@ -24,7 +24,7 @@ The site was built using [GitHub Pages](htps://pages.github.com/).
 
 - Alternatively, view on [GitHub Pages](https://brian-weloba.github.io/akan-name/).
 
-## BDD
+## Script
 
 User inputs date of birth on provided form and select a gender.
 
@@ -44,7 +44,7 @@ getAkanName(dayOfWeek);
 ```javascript
 function clientSideValidation() {
    //get user input
-   if(conditions for invalid input) {
+   if(conditions on invalid input) {
       //function to set error message
    } else {
       //set success message
@@ -69,6 +69,47 @@ function clientSideValidation() {
    //update html form to display result
   }
   ```
+
+## BDD
+Behavioral specifications:
+>**Title**: Get Akan name
+
+>**As** a user.  
+>**I want to** I input my date of birth.  
+>**so** that I can get my Akan name  
+
+>**Scenario 1:** Male user    
+>**Given** that I am male  
+>**and** I was born on 14/2/1998   
+>**when** I input my date of birth  
+>**and** I select my gender as Male.  
+>**then** I should get my akan name is Kwame    
+>**and** I was born on a Saturday.  
+
+>**Scenario 2:** Female user    
+>**Given** that I am female  
+>**and** I was born on 25/5/1989   
+>**when** I input my date of birth  
+>**and** I select my gender as Female.  
+>**then** I should get my akan name is Yaa    
+>**and** I was born on a Thursday. 
+
+>**Scenario 3:** Fail to select genger.    
+>**Given** that I am female  
+>**and** I was born on 25/5/1989   
+>**when** I input my date of birth  
+>**and** I fail to select my gender as Female.  
+>**then** I should get my akan name is Yaw (Male name).    
+>**and** I was born on a Thursday. 
+
+>**Scenario 4:** Dates before October 1582.    
+>**Given** that I want to know the Akan name of someone born before 1582
+>**when** I input my date of birth  
+>**and** I fail to select my gender as Female.  
+>**then** I should not get the right day of week because of the lack of leap years in the calendar  
+
+
+
 
 ## Contact
 
