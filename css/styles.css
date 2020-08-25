@@ -193,3 +193,7 @@ small {
 .navbar p {
     font-size: 32px;
 }
+
+#sel1 {
+    padding: 10px;
+}

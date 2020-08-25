@@ -141,13 +141,13 @@ function getAkan(y) {
     //get gender
     var gender = document.getElementById("sel1").selectedIndex;
     for (let i = 0; i < 7; i++) {
-        if (gender == 0) {
+        if (gender == 1) {
             if (y == i) {
                 document.getElementById("dayb").innerHTML = dayInWeek[i];
                 document.getElementById("akanN").innerHTML = akanNameMale[i];
                 document.getElementById("meaning").innerHTML = info[i];
             }
-        } else if (gender == 1) {
+        } else if (gender == 2) {
             if (y == i) {
                 document.getElementById("dayb").innerHTML = dayInWeek[i];
                 document.getElementById("akanN").innerHTML = akanNameFemale[i];
