@@ -50,7 +50,6 @@ form.addEventListener("submit", (e) => {
 //validate input
 function checkInputs() {
     //get values
-    debugger;
     const yearValue = year.value.trim();
     const monthValue = month.value.trim();
     const dayValue = day.value.trim();
@@ -133,7 +132,6 @@ function setDay() {
 
 //invalid input message
 function setErrorFor(input, message) {
-    debugger;
     const formControl = input.parentElement; //formcontrol
     const small = formControl.querySelector("small");
 
@@ -173,7 +171,6 @@ function getAkan(y) {
 }
 
 function myFunction() {
-    debugger;
     let x = document.getElementById("akan");
     let y = document.getElementById("form");
     if (dayValid === true && monthValid === true && yearValid === true && genderValid === true) {

@@ -71,6 +71,7 @@ function clientSideValidation() {
   ```
 
 ## BDD
+
 Behavioral specifications:
 >**Title**: Get Akan name
 
@@ -78,38 +79,34 @@ Behavioral specifications:
 >**I want to** I input my date of birth.  
 >**so** that I can get my Akan name  
 
->**Scenario 1:** Male user    
+>**Scenario 1:** Male user  
 >**Given** that I am male  
->**and** I was born on 14/2/1998   
+>**and** I was born on 14/2/1998  
 >**when** I input my date of birth  
 >**and** I select my gender as Male.  
->**then** I should get my akan name is Kwame    
+>**then** I should get my akan name is Kwame  
 >**and** I was born on a Saturday.  
 
->**Scenario 2:** Female user    
+>**Scenario 2:** Female user  
 >**Given** that I am female  
->**and** I was born on 25/5/1989   
+>**and** I was born on 25/5/1989  
 >**when** I input my date of birth  
 >**and** I select my gender as Female.  
->**then** I should get my akan name is Yaa    
->**and** I was born on a Thursday. 
+>**then** I should get my akan name is Yaa  
+>**and** I was born on a Thursday.  
 
->**Scenario 3:** Fail to select genger.    
+>**Scenario 3:** Fail to select genger.  
 >**Given** that I am female  
->**and** I was born on 25/5/1989   
+>**and** I was born on 25/5/1989  
 >**when** I input my date of birth  
 >**and** I fail to select my gender as Female.  
->**then** I should get my akan name is Yaw (Male name).    
->**and** I was born on a Thursday. 
+>**then** I should get an error message.  
 
->**Scenario 4:** Dates before October 1582.    
+>**Scenario 4:** Dates before October 1582.  
 >**Given** that I want to know the Akan name of someone born before 1582
 >**when** I input my date of birth  
 >**and** I fail to select my gender as Female.  
->**then** I should not get the right day of week because of the lack of leap years in the calendar  
-
-
-
+>**then** I should not get an error because the Gregorian system wasnt invented  
 
 ## Contact
 
