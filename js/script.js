@@ -8,6 +8,7 @@ var info = ["associated with the universe", "associated with peace", "associated
 var yearValid = false;
 var monthValid = false;
 var dayValid = false;
+var genderValid = false;
 
 // a function to get the day of the week
 var dayOfWeek = function() {
@@ -36,6 +37,7 @@ const year = document.getElementById("year");
 const month = document.getElementById("month");
 const day = document.getElementById("dob");
 const akan = document.getElementById("akan");
+const gender = document.getElementById("sel1");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -48,9 +50,11 @@ form.addEventListener("submit", (e) => {
 //validate input
 function checkInputs() {
     //get values
+    debugger;
     const yearValue = year.value.trim();
     const monthValue = month.value.trim();
     const dayValue = day.value.trim();
+    const selectIndex = gender.selectedIndex;
 
     if (yearValue === "") {
         setErrorFor(year, "Year cannot be empty");
@@ -72,8 +76,10 @@ function checkInputs() {
         monthValid = true;
     }
 
-    if (dayValue === "" || dayValue > 31) {
+    if (dayValue === "") {
         setErrorFor(day, "Day cannot be empty");
+    } else if (dayValue > 31) {
+        setErrorFor(day, "Not a valid day");
     } else {
         if (monthValue == 4 || monthValue == 6 || monthValue == 9 || monthValue == 11) {
             if (dayValue < 1 || dayValue > 30) {
@@ -108,6 +114,13 @@ function checkInputs() {
 
         }
     }
+
+    if (selectIndex == 0) {
+        setErrorFor(gender, "Please select gender");
+    } else if (selectIndex == 1 || selectIndex == 2) {
+        setSuccessFor(gender);
+        genderValid = true;
+    }
 }
 
 //set day of week [0-6]
@@ -120,6 +133,7 @@ function setDay() {
 
 //invalid input message
 function setErrorFor(input, message) {
+    debugger;
     const formControl = input.parentElement; //formcontrol
     const small = formControl.querySelector("small");
 
@@ -153,15 +167,16 @@ function getAkan(y) {
                 document.getElementById("akanN").innerHTML = akanNameFemale[i];
                 document.getElementById("meaning").innerHTML = info[i];
             }
-        }
+        } else {}
     }
     myFunction();
 }
 
 function myFunction() {
+    debugger;
     let x = document.getElementById("akan");
     let y = document.getElementById("form");
-    if (dayValid === true && monthValid === true && yearValid === true) {
+    if (dayValid === true && monthValid === true && yearValid === true && genderValid === true) {
         if (x.style.display === "none" || x.style.display === "") {
             x.style.display = "flex";
             y.style.display = "none";

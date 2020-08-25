@@ -66,6 +66,7 @@
     margin-bottom: 10px;
     padding-bottom: 35px;
     position: relative;
+    background-color: #fcf4e8;
 }
 
 .form-control label {
@@ -73,7 +74,8 @@
     margin-bottom: 5px;
 }
 
-.form-control input {
+.form-control input,
+.form-control select {
     border: 2px solid #ffcc33;
     border-radius: 4px;
     display: block;
@@ -84,11 +86,13 @@
     color: #303030;
 }
 
-.form-control.success input {
+.form-control.success input,
+.form-control.success select {
     border-color: green;
 }
 
-.form-control.error input {
+.form-control.error input,
+.form-control.error select {
     border-color: red;
 }
 
@@ -194,6 +198,6 @@ small {
     font-size: 32px;
 }
 
-#sel1 {
-    padding: 10px;
+.form-control select {
+    background-color: #ffffff;
 }
