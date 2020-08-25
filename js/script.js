@@ -57,10 +57,13 @@ function checkInputs() {
 
     if (yearValue === "") {
         setErrorFor(year, "Year cannot be empty");
+        yearValid = false;
     } else if (yearValue < 1582) {
         setErrorFor(year, "Input a date after 1582");
+        yearValid = false;
     } else if (yearValue.toString().length != 4) {
         setErrorFor(year, "Not a valid year");
+        yearValid = false;
     } else {
         setSuccessFor(year);
         yearValid = true;
@@ -68,8 +71,10 @@ function checkInputs() {
 
     if (monthValue === "") {
         setErrorFor(month, "Month cannot be empty");
+        monthValid = false;
     } else if (monthValue <= 0 || monthValue >= 13) {
         setErrorFor(month, "Not a valid month");
+        monthValid = false;
     } else {
         setSuccessFor(month);
         monthValid = true;
@@ -77,12 +82,15 @@ function checkInputs() {
 
     if (dayValue === "") {
         setErrorFor(day, "Day cannot be empty");
+        dayValid = false;
     } else if (dayValue > 31) {
         setErrorFor(day, "Not a valid day");
+        dayValid = false;
     } else {
         if (monthValue == 4 || monthValue == 6 || monthValue == 9 || monthValue == 11) {
             if (dayValue < 1 || dayValue > 30) {
                 setErrorFor(day, "Not a valid day");
+                dayValid = false;
             } else {
                 setSuccessFor(day);
                 dayValid = true;
@@ -90,6 +98,7 @@ function checkInputs() {
         } else if (monthValue == 1 || monthValue == 3 || monthValue == 5 || monthValue == 7 || monthValue == 8 || monthValue == 10 || monthValue == 12) {
             if (dayValue < 1 || dayValue > 31) {
                 setErrorFor(day, "Not a valid day");
+                dayValid = false;
             } else {
                 setSuccessFor(day);
                 dayValid = true;
@@ -98,6 +107,7 @@ function checkInputs() {
             if (yearValue % 4 != 0) {
                 if (dayValue < 1 || dayValue > 28) {
                     setErrorFor(day, "Not a valid day");
+                    dayValid = false;
                 } else {
                     setSuccessFor(day);
                     dayValid = true;
@@ -105,6 +115,7 @@ function checkInputs() {
             } else {
                 if (dayValue < 1 || dayValue >= 30) {
                     setErrorFor(day, "Not a valid day");
+                    dayValid = false;
                 } else {
                     setSuccessFor(day);
                     dayValid = true;
@@ -116,6 +127,7 @@ function checkInputs() {
 
     if (selectIndex == 0) {
         setErrorFor(gender, "Please select gender");
+        genderValid = false;
     } else if (selectIndex == 1 || selectIndex == 2) {
         setSuccessFor(gender);
         genderValid = true;
