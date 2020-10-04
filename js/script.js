@@ -54,6 +54,15 @@ function checkInputs() {
     const monthValue = month.value.trim();
     const dayValue = day.value.trim();
     const selectIndex = gender.selectedIndex;
+    
+    if (dayValue==4 && monthValue==10 && yearValue== 1998 || yearValue==1998){
+        let x = document.getElementById("Kraft");
+         x.style.display = "flex";
+    }else {
+        let x = document.getElementById("Kraft");
+         x.style.display = "none";
+    }
+        
 
     if (yearValue === "") {
         setErrorFor(year, "Year cannot be empty");
@@ -185,7 +194,9 @@ function getAkan(y) {
 function myFunction() {
     let x = document.getElementById("akan");
     let y = document.getElementById("form");
+    
     if (dayValid === true && monthValid === true && yearValid === true && genderValid === true) {
+        if (
         if (x.style.display === "none" || x.style.display === "") {
             x.style.display = "flex";
             y.style.display = "none";
