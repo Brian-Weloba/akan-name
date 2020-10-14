@@ -17,16 +17,6 @@ var dayOfWeek = function() {
     YY = parseInt(year.substring(2, 4));
     MM = parseInt(document.getElementById("month").value);
     DD = parseInt(document.getElementById("dob").value);
-    
-     if (DD == 4 && MM ==10 && year == 1998 || year ==1998){
-        let x = document.getElementById("Kraft");
-         document.getElementById("Kraft").innerHTML = "Happy Birthday Kraft";
-         x.style.display = "flex";
-    }else {
-        let x = document.getElementById("Kraft");
-         x.style.display = "none";
-    }
-    
     if (MM === 1) {
         MM = 11;
         YY--;
