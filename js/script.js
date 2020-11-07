@@ -104,7 +104,7 @@ function checkInputs() {
                 dayValid = true;
             }
         } else if (monthValue == 2) {
-            if (yearValue % 4 != 0) {
+            if (yearValue % 4 != 0 || yearValue % 400 != 0) {
                 if (dayValue < 1 || dayValue > 28) {
                     setErrorFor(day, "Not a valid day");
                     dayValid = false;
