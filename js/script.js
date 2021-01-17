@@ -54,6 +54,7 @@ function checkInputs() {
     const monthValue = month.value.trim();
     const dayValue = day.value.trim();
     const selectIndex = gender.selectedIndex;
+        
 
     if (yearValue === "") {
         setErrorFor(year, "Year cannot be empty");
@@ -164,6 +165,9 @@ function setSuccessFor(input) {
 function getAkan(y) {
     //get gender
     var gender = document.getElementById("sel1").selectedIndex;
+    
+    
+    
     for (let i = 0; i < 7; i++) {
         if (gender == 1) {
             if (y == i) {
@@ -185,7 +189,9 @@ function getAkan(y) {
 function myFunction() {
     let x = document.getElementById("akan");
     let y = document.getElementById("form");
+    
     if (dayValid === true && monthValid === true && yearValid === true && genderValid === true) {
+        if (
         if (x.style.display === "none" || x.style.display === "") {
             x.style.display = "flex";
             y.style.display = "none";
